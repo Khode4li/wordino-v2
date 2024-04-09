@@ -19,10 +19,10 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: '!@#123QWEqwe'
+      MYSQL_ROOT_PASSWORD: '--DBPW--'
       MYSQL_DATABASE: wordino
       MYSQL_USER: wduser
-      MYSQL_PASSWORD: '!@#123QWEqwe'
+      MYSQL_PASSWORD: '--DBPW--'
     volumes:
       - ./database:/var/lib/mysql
 
@@ -32,7 +32,7 @@ services:
       - "8081:80"
     environment:
       PMA_HOST: mysql
-      MYSQL_ROOT_PASSWORD: '!@#123QWEqwe'
+      MYSQL_ROOT_PASSWORD: '--DBPW--'
 
   redis:
     image: redis:latest
