@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  php-apache:
+    build:
+      context: .
+      dockerfile: Dockerfile.php-apache
+    ports:
+      - "8080:80"
+    volumes:
+      - ./apache-config.conf:/etc/apache2/sites-available/000-default.conf
+      - ./:/var/www/html
+    depends_on:
+      - mysql
+      - redis
+
+  mysql:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: '!@#123QWEqwe'
+      MYSQL_DATABASE: wordino
+      MYSQL_USER: wduser
+      MYSQL_PASSWORD: '!@#123QWEqwe'
+    volumes:
+      - ./database:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: mysql
+      MYSQL_ROOT_PASSWORD: '!@#123QWEqwe'
+
+  redis:
+    image: redis:latest
