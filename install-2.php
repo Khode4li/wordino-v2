@@ -237,4 +237,4 @@ COMMIT;
 ");
 
 $conn->query("INSERT INTO `user` (`id`, `username`, `password`, `role_id`) VALUES
-(4, :username, :password, '1')", [':username' => $user, ':password' => md5($pass.\system\registry\registry::get('salt'))]);
+(1, :username, :password, '1')", [':username' => $user, ':password' => md5($pass.\system\registry\registry::get('salt'))]);
