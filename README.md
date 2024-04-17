@@ -4,7 +4,7 @@
 </h1>
 
 <p align="center">
-<a href="#Key-Features">Key Features</a> - <a href="#Installation">Installation</a> - <a href="#Https">Https</a> - <a href="#Configuration">Configuration</a> - <a href="#How-To-Use">How To Use</a> - <a href="#Todo-List">Todo List</a>
+<a href="#Key-Features">Key Features</a> - <a href="#Installation">Installation</a> - <a href="#Https">Https</a> - <a href="#Configuration">Configuration</a> - <a href="#How-To-Use">How To Use</a> - <a href="#Warning">Warning</a> - <a href="#Todo-List">Todo List</a>
 </p>
 
 ---
@@ -102,4 +102,4 @@ If you have any new ideas that you think would be useful, I'd be happy to hear f
 - [ ] Utilize Redis for rate-limiting the login endpoint effectively.
 - [ ] I can refactor the process of cleaning data returned from the database into a single function. For example: {`"username": "x", "0": "x"`}.
 - [ ] Transform certain arrays into objects for increased safety and better code organization.
-
+- [ ] Is there a faster way for managing wordlists?
